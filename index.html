@@ -5,21 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <script src="script.js"></script>
+
+    <title>Calculator</title>
 </head>
 <body>
     <h1>Calculator</h1>
     <div id="calculator">
+
         <div id ="row1" class="calc-row">
             <input type ="number" id="operand1">
-            <!-- next step: adding input for next operand input -->
+            <span id="operation">+</span>
+            <input type = "number" id= "operand2">
+            <span>=</span>
+            <input type = "number" id = "result" readonly>
+            <span></span>
         </div>
+
         <div id="row2" class ="calc-row">
-            <button id ="add">+</button>
-            <button id ="subtraction">-</button>
-            <button id ="multiplication">x</button>
-            <button id ="division">/</button>
+            <button id ="add" onclick="changedOperation('+');">+</button>
+            <button id ="subtraction" onclick="changedOperation('-');">-</button>
+            <button id ="multiplication" onclick="changedOperation('x');">x</button>
+            <button id ="division" onclick= "changedOperation('/');">/</button>
+            <button id="enter" onclick="submit();">=</button>
         </div>
+
     </div>
 </body>
 </html>

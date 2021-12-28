@@ -4,9 +4,27 @@
 }
 
 input{
-    width: 90px;
+    width: 40px;
+    border-radius: 25px;
+    
 }
 
 h1{
     color: grey;
+}
+
+button{
+    background-color: #e7e7e7; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  color: black;
+} 
+button:hover{
+    background-color: #A9A9A9;
+    border:1px solid #6b6b69;
 }
