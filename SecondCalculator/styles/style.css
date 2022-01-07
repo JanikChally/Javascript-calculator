@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 50%;
+    margin:auto;
+}
+
+
+#double:hover{
+    background-color: #A9A9A9;
+    border:1px solid #6b6b69;
+}
+#third:hover{
+    background-color: #A9A9A9;
+    border:1px solid #6b6b69;
+}
+.calc-button{
+    width:200px;
+    margin:auto;
+}
+.calc-button button{
+    background-color: #e7e7e7; /* Green */
+    border: 5 black solid;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    color: black;
+    width:60px;
+    height:60px;
+}
+.number-button:hover{
+    background-color: #A9A9A9;
+    border:1px solid #6b6b69;
+}
+#double{
+    background-color: #7c7a7a; /* Green */
+    
+    
+}
+#third{
+    background-color: #7c7a7a; /* Green */
+}
