@@ -61,8 +61,8 @@ buttons.addEventListener('click', (event) => {
         calculator.dataset.firstnumber ="";
         calculator.dataset.secondElmt ="";
     }
-    let calculate = (firstNum,operand,secondNum)=> {
-        return firstNum `${operand}` secondNum;
-        } 
+    // let calculate = (firstNum,operand,secondNum)=> {
+    //     return firstNum `${operand}` secondNum;
+    //     } 
 })
 
