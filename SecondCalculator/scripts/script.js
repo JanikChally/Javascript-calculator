@@ -1,5 +1,19 @@
 let buttons = document.querySelector('.calc-button');
 
+const calculate = { //object literal
+    'add': function(n1, n2) {
+        return n1 + n2;
+    },
+    'sub': function(n1, n2){
+        return n1 - n2;
+    },
+    'mult': function(n1, n2){
+        return n1 * n2;
+    },
+    'divide': function(n1, n2){
+        return n1 / n2;
+    }
+}
 
 
 buttons.addEventListener('click', (event) => {
@@ -46,19 +60,27 @@ buttons.addEventListener('click', (event) => {
     else if(elmt.classList.contains('operator-button')){
         calculator.dataset.firstNumber=display.value;//stores current value
         calculator.dataset.secondElmt=elmt.id;//stores operand elemt pressed
+        display.value = 0;
         console.log(calculator.dataset);
+        //if (calculator.secondElmt === mult){
+            //calculate(firstNumber,thirdNumber)
+        //}
         
     }
 
     else if(elmt.id === 'equal'){
         if(calculator.dataset.firstNumber && calculator.dataset.secondElmt){
+            display.value = calculate[calculator.dataset.secondElmt](caclulator.dataset.firstNumber, display.value)
+            //x['y']()
+            //equivalent to
+            //x.y()
             console.log('Passed');
 
         }
         else{
             console.log('not passed');
         }
-        calculator.dataset.firstnumber ="";
+        calculator.dataset.firstNumber ="";
         calculator.dataset.secondElmt ="";
     }
     // let calculate = (firstNum,operand,secondNum)=> {
