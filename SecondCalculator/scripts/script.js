@@ -80,8 +80,7 @@ buttons.addEventListener('click', (event) => {
         else{
             console.log('not passed');
         }
-        calculator.dataset.firstNumber ="";
-        calculator.dataset.secondElmt ="";
+        
     }
     // let calculate = (firstNum,operand,secondNum)=> {
     //     return firstNum `${operand}` secondNum;
