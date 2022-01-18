@@ -21,7 +21,7 @@ buttons.addEventListener('click', (event) => {
     const display = document.querySelector('.calc-input');
     const calculator = document.querySelector('.calculator');
     
-    calculator.dataset.firstNumber = '12';
+    
 
     if (elmt.id === 'double') {
         document.querySelector('.calc-input').value *= 2;
