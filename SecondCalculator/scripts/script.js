@@ -70,7 +70,7 @@ buttons.addEventListener('click', (event) => {
 
     else if(elmt.id === 'equal'){
         if(calculator.dataset.firstNumber && calculator.dataset.secondElmt){
-            display.value = calculate[calculator.dataset.secondElmt](caclulator.dataset.firstNumber, display.value)
+            display.value = calculate[calculator.dataset.secondElmt](calculator.dataset.firstNumber, display.value)
             //x['y']()
             //equivalent to
             //x.y()
