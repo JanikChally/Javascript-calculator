@@ -70,7 +70,7 @@ buttons.addEventListener('click', (event) => {
 
     else if(elmt.id === 'equal'){
         if(calculator.dataset.firstNumber && calculator.dataset.secondElmt){
-            display.value = calculate[calculator.dataset.secondElmt](calculator.dataset.firstNumber, display.value)
+            display.value = calculate[calculator.dataset.secondElmt](parseFloat(calculator.dataset.firstNumber), parseFloat(display.value))
             //x['y']()
             //equivalent to
             //x.y()
@@ -80,6 +80,8 @@ buttons.addEventListener('click', (event) => {
         else{
             console.log('not passed');
         }
+        calculator.dataset.firstNumber="";
+        calculator.dataset.secondElmt="";
         
     }
     // let calculate = (firstNum,operand,secondNum)=> {
