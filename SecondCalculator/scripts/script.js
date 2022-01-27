@@ -1,5 +1,7 @@
 let buttons = document.querySelector('.calc-button');
-
+const testFunction = function(n1,n2){
+    
+}
 const calculate = { //object literal
     'add': function(n1, n2) {
         return n1 + n2;
@@ -20,6 +22,7 @@ buttons.addEventListener('click', (event) => {
     const elmt = event.target;
     const display = document.querySelector('.calc-input');
     const calculator = document.querySelector('.calculator');
+    console.log(calculator.dataset);
     
     
 
@@ -42,7 +45,10 @@ buttons.addEventListener('click', (event) => {
         }
 
     }else if(elmt.id === 'clear'){
-        display.value = 0;
+        display.value=0;
+        calculator.dataset.firstNumber=0;
+        calculator.dataset.secondElmt="";
+        
     }else if(elmt.id ==='negative'){//Button for +/- sign
         if(!display.value.includes('-')){
             if(display.value !=='0'){
@@ -58,14 +64,16 @@ buttons.addEventListener('click', (event) => {
 
     
     else if(elmt.classList.contains('operator-button')){
+        //if(display.value = 0)
         calculator.dataset.firstNumber=display.value;//stores current value
         calculator.dataset.secondElmt=elmt.id;//stores operand elemt pressed
+        
         display.value = 0;
         console.log(calculator.dataset);
         //if (calculator.secondElmt === mult){
             //calculate(firstNumber,thirdNumber)
         //}
-        
+        // display.value = calculate[calculator.dataset.secondElmt](parseFloat(calculator.dataset.firstNumber), parseFloat(display.value))
     }
 
     else if(elmt.id === 'equal'){

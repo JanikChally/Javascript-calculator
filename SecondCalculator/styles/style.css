@@ -71,13 +71,22 @@ h3{
 .calculator .calc-button .grey-button{
     background-color: #a5a5a5;
 }
+.calculator .calc-button .grey-button:hover{
+    background:grey;
+}
 .calculator .calc-button .orange-button{
     Background-color: #F09A10;
     color:white;
 }
+.calculator .calc-button .orange-button:hover{
+    background-color: rgb(173, 115, 7);
+}
 .calculator .calc-button .number-button{
     background:rgb(61, 61, 61);
     color:white;
+}
+.calculator .calc-button .number-button:hover{
+    background-color: grey;
 }
 
 /* For next time, add hover color to buttons and maybe
