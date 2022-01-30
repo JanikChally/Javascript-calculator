@@ -16,16 +16,17 @@ const calculate = { //object literal
         return n1 / n2;
     }
 }
-
-
+const calculator = document.querySelector('.calculator');
+calculator.dataset.firstNumber="";
+calculator.dataset.secondElmt="";
 buttons.addEventListener('click', (event) => {
     const elmt = event.target;
     const display = document.querySelector('.calc-input');
     const calculator = document.querySelector('.calculator');
-    console.log(calculator.dataset);
     
     
-
+  
+   
     if (elmt.id === 'double') {
         document.querySelector('.calc-input').value *= 2;
 
@@ -46,7 +47,7 @@ buttons.addEventListener('click', (event) => {
 
     }else if(elmt.id === 'clear'){
         display.value=0;
-        calculator.dataset.firstNumber=0;
+        calculator.dataset.firstNumber="";
         calculator.dataset.secondElmt="";
         
     }else if(elmt.id ==='negative'){//Button for +/- sign
@@ -64,16 +65,22 @@ buttons.addEventListener('click', (event) => {
 
     
     else if(elmt.classList.contains('operator-button')){
-        //if(display.value = 0)
-        calculator.dataset.firstNumber=display.value;//stores current value
-        calculator.dataset.secondElmt=elmt.id;//stores operand elemt pressed
         
-        display.value = 0;
-        console.log(calculator.dataset);
+        if(calculator.dataset.secondElmt ===''){
+            calculator.dataset.firstNumber=display.value;//stores current value
+            calculator.dataset.secondElmt=elmt.id;//stores operand elemt pressed
+            display.value = 0;
+            
+            console.log('test 2');
+        }
+        else{
+            calculator.dataset.secondElmt=elmt.id;
+        }
         //if (calculator.secondElmt === mult){
             //calculate(firstNumber,thirdNumber)
         //}
         // display.value = calculate[calculator.dataset.secondElmt](parseFloat(calculator.dataset.firstNumber), parseFloat(display.value))
+        
     }
 
     else if(elmt.id === 'equal'){
@@ -95,5 +102,6 @@ buttons.addEventListener('click', (event) => {
     // let calculate = (firstNum,operand,secondNum)=> {
     //     return firstNum `${operand}` secondNum;
     //     } 
+    console.log(calculator.dataset);
 })
 
